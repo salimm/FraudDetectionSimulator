@@ -1,0 +1,24 @@
+09-01 02:21:05 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+INSERT INTO TEST VALUES(1,simulator.data.SerializableInstance@76f8968f,1) [42102-168]
+09-01 02:21:18 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+INSERT INTO TEST VALUES(1,simulator.data.SerializableInstance@76f8968f,1) [42102-168]
+09-01 02:21:59 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO TEST VALUES(1,SIMULATOR.DATA.SERIALIZABLEINSTANCE@[*]2EFB56B1,1) "; expected "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO TEST VALUES(1,simulator.data.SerializableInstance@2efb56b1,1) [42001-168]
+09-01 02:22:40 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" already exists; SQL statement:
+CREATE TABLE TEST(ID INT PRIMARY KEY, VALUE OTHER, MONTH INT) [42101-168]
+09-01 02:22:49 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO TEST VALUES(1,SIMULATOR.DATA.SERIALIZABLEINSTANCE@[*]3A64C34E,1); "; expected "(, ., [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO TEST VALUES(1,simulator.data.SerializableInstance@3a64c34e,1); [42001-168]
+09-01 02:26:44 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "OTHER" not found [42122-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:2893)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:2979)
+	at org.h2.jdbc.JdbcResultSet.getObject(JdbcResultSet.java:491)
+	at TestMain.main(TestMain.java:23)
