@@ -44,11 +44,12 @@ public class SOptions implements SOptInterface {
 		return list.get(name);
 
 	}
-	public SOptions getOptions(String name){
+
+	public SOptions getOptions(String name) {
 		SOptInterface opt = getOpt(name);
-		if(opt==null)
+		if (opt == null)
 			return null;
-		return (SOptions)opt;
+		return (SOptions) opt;
 	}
 
 	public int getInt(String name, int def) {
@@ -67,7 +68,7 @@ public class SOptions implements SOptInterface {
 			return new Double(((SSingleOpt) val).getValue().trim());
 	}
 
-	public float getInt(String name, float def) {
+	public float getFloat(String name, float def) {
 		SOptInterface val = getOpt(name);
 		if (val == null)
 			return def;
@@ -75,7 +76,7 @@ public class SOptions implements SOptInterface {
 			return new Float(((SSingleOpt) val).getValue().trim());
 	}
 
-	public Long getInt(String name, long def) {
+	public Long getLong(String name, long def) {
 		SOptInterface val = getOpt(name);
 		if (val == null)
 			return def;

@@ -10,4 +10,8 @@ public abstract class AbstractAgent {
 	public abstract void classify(AbstractInstance ins);
 	
 	public abstract void train(Instances train);
+
+	public void improve(int month) {
+		
+	}
 }

@@ -14,7 +14,7 @@ import org.h2.Driver;
 
 import simulator.conf.SOptions;
 import simulator.data.AbstractInstance;
-import simulator.scoring.ScoreBoard;
+import simulator.policy.ScoreBoard;
 
 public class DBManager {
 	private Connection con;
